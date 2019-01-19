@@ -14,13 +14,17 @@ public class ShowData {
 		ResultSet rs=stmt.executeQuery(sql);
 		
 		while(rs.next()){
-		String s1=rs.getString(1);
-		String s2=rs.getString(2);
-		String s3=rs.getString(3);		
-		System.out.println(s1+","+s2+","+s3);
+		System.out.println(rs.getString(1));		
 		}
 		
-		//con.close();
+		rs.beforeFirst();
+		
+		while(rs.next()){
+		System.out.println(rs.getString(2));		
+		}
+		
+		
+		con.close();
 
 	}
 
